@@ -15,9 +15,24 @@ function consume(a, b, callback) {
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-const add = consume() {
-    return  a + b;
-  }
+function add(num1, num2, callback) {
+  return callback (num1 + num2);
+}
+
+add.consume();
+
+function multiply(num1, num2, callback) {
+  return callback (num1 * num2);
+}
+
+multiply.consume();
+
+function greeting(firstName, lastName, callback) {
+  return callback (`Hello ${firstName} ${lastName}, nice to meet you!`)
+}
+
+greeting.consume();
+
 
 
 
